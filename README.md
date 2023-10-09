@@ -1,60 +1,7 @@
 # p5.js Template
 
-This is a README file that can be used to describe and document your assignment.
-
-Markdown Cheatsheet (from [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)):
-
----
----
-
-# Heading1
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5
-###### Heading6
-
-**bold text**
-
-*italicized text*
-
-~~strikethrough text~~
-
-Ordered List:
-1. First item
-2. Second item
-3. Third item
-
-Unordered List:
-- First item
-- Second item
-- Third item
-
-`short code block`
-
-```
-extended code block
-fun() {
-  return 0
-}
-```
-
-Link:  
-[linked text](https://www.example.com)
-
-
-Image with url:  
-![image description](https://dm-gy-6063-2023f-d.github.io/assets/homework/02/clark-espaco-modulado-00.jpg)
-
-
-Image on repo:  
-![image description](./file-name.jpg)
-
-
-To start a new line, add two spaces at the end of a line, like this:  
-this is a new line.
-
-
-To start a new paragraph, leave an empty line between two lines of text.
-
-This is a new paragraph.
+I chose the book - "Where's Waldo" which is an interactive book, where the goal is to find the character Waldo. 
+I want to include the concept of chaos in my program, inspired by the chaos on the book cover. 
+I want to make an interactive piece where there are random, abstract forms all over the canvas, and the goal is to find a specific type of form, that would look like Waldo. Or create a canvas where the user can create their own abstract forms all over. The forms could also move with passing time. 
+I would want to experiment with mouse click functions, and also functions (My idea is to create different functions with different abstract forms and call them randomely)
+I guess I could relate this idea to the concept of interactivity, which we read about in "The Art of Interactive Design" by Chris Crawford, where I would want to address form and function. 
