@@ -15,6 +15,31 @@ class Shapes {
     fill(this.color);
     ellipse(this.xPos, this.yPos, this.x, this.y);
   }
+
+  checkOverlap(otherShape) {
+    // check if comparing to itself
+    if (this == otherShape) {
+      return false;
+    }
+    // use distance between 2 circles and radius to check overlap
+    let cDist = dist(this.x, this.y, otherShape.x, otherShape.y);
+    return cDist < this.x + otherCircle.x;
+  }
+  
+  checkAllOverlaps() {
+    let overlap = false;
+    for (let ci = 0; ci < shapeArray.length; ci++) {
+      let aShape = shapeArray[ci];
+      if (this.checkOverlap(aShape)) {
+        overlap = true;
+      }
+      if (overlap) {
+        this.xPos = random(0, width); 
+        this.yPos = random(0, height); 
+      } 
+    }
+  }
+  
     //for (i = 0; i<3; i++) {
      // let a = rect(this.xPos, this.yPos, this.x, this.y); 
       //let b = ellipse(this,xPos, this.yPos, this.x, this.y); 
@@ -25,7 +50,7 @@ class Shapes {
 }
 
 let shapeArray = []; 
-let numShapes = 50; 
+let numShapes = 100; 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -56,7 +81,9 @@ function draw() {
 
     // draw
     aShape.drawShapes();
+    aShape.checkAllOverlaps(); 
   }
+
 }
 
 
