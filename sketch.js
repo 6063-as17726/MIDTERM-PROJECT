@@ -1,3 +1,7 @@
+//How to run the mouseclick function to identify Waldo 
+//How to avoid/decrease overlap of the characters 
+
+
 // let minDiameter;
 // let maxDiameter;
 
@@ -174,10 +178,6 @@ function character3() {
  noStroke();
  rect(87, 125, 25, 20);
 }
-
-
-
-
 
 function setup() {
    createCanvas(windowWidth, windowHeight);
