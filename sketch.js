@@ -1,13 +1,6 @@
 //How to run the mouseclick function to identify Waldo 
 //How to avoid/decrease overlap of the characters 
 
-
-// let minDiameter;
-// let maxDiameter;
-
-// let myShapes = [];
-// let maxNumShapes = 200;
-
 function character1() {
   // Body
  fill(0);
@@ -182,16 +175,9 @@ function character3() {
 function setup() {
    createCanvas(windowWidth, windowHeight);
    background(240); 
-//   maxDiameter = width / 10;
-//   minDiameter = maxDiameter / 3;
-// }
-
-// function drawShape(aShape) {
-//   ellipse(aShape.x, aShape.y, aShape.d, aShape.d);
  }
 
  function draw() {
-  //character1(); 
   waldo(); 
   push(); 
   translate (100,0); 
@@ -205,18 +191,7 @@ function setup() {
   translate (300,0); 
   character3();
   pop(); 
-//   background(239, 252, 255);
-//   myShapes.forEach(drawShape);
  }
-
-// function addShape() {
-//   let newShape = {
-//     x: random(width),
-//     y: random(height),
-//     d: random(minDiameter, maxDiameter),
-//   };
-//   myShapes.push(newShape);
-// }
 
 // function mouseClicked() {
 //   // if more than maxCircles, then add the top box 
