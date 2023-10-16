@@ -2,6 +2,10 @@
 //How to avoid/decrease overlap of the characters 
 
 function character1() {
+  //push();
+  //translate(x,y);
+  //pop(); 
+
   // Body
  fill(0);
  stroke(0);
@@ -173,12 +177,15 @@ function character3() {
 }
 
 function setup() {
-   createCanvas(windowWidth, windowHeight);
+   //fixed canvas dimensions 
+  createCanvas(windowWidth, windowHeight);
    background(240); 
+   //array with all the character functions 
+   noloop(); 
  }
 
  function draw() {
-  waldo(); 
+  //run loop to draw functions - x is random, y is incrementing 
   push(); 
   translate (100,0); 
   character1();
@@ -191,6 +198,9 @@ function setup() {
   translate (300,0); 
   character3();
   pop(); 
+
+  //check if click is between x and x+w and y and y+h 
+  waldo(x,y); 
  }
 
 // function mouseClicked() {
