@@ -1,7 +1,7 @@
 //How to run the mouseclick function to identify Waldo 
 //How to avoid/decrease overlap of the characters 
 
-function character1() {
+function character0() {
   //push();
   //translate(x,y);
   //pop(); 
@@ -83,7 +83,7 @@ function waldo() {
  noStroke();
  rect(90, 150, 20, 20);
 }
-function character2() {
+function character1() {
 //stick
  strokeWeight(1); 
  stroke(0); 
@@ -129,7 +129,7 @@ function character2() {
  triangle(80, 75, 120, 75, 100, 40);
 
 }
-function character3() {
+function character2() {
   // Body
  fill(255, 0, 0);
  stroke(0);
@@ -175,43 +175,43 @@ function character3() {
  noStroke();
  rect(87, 125, 25, 20);
 }
+function banner() {
+  
+}
 
 function setup() {
    //fixed canvas dimensions 
   createCanvas(windowWidth, windowHeight);
    background(240); 
-   //array with all the character functions 
+   let F = [character0(),character1(), character2()]; 
    noloop(); 
  }
 
  function draw() {
   //run loop to draw functions - x is random, y is incrementing 
-  push(); 
-  translate (100,0); 
-  character1();
-  pop(); 
-  push(); 
-  translate (200,0); 
-  character2();
-  pop();  
-  push(); 
-  translate (300,0); 
-  character3();
-  pop(); 
+  let rowheight = windowHeight/7; 
 
-  //check if click is between x and x+w and y and y+h 
-  waldo(x,y); 
+  let xpos = random(0, width); 
+  let ypos = random()
+  waldo(xpos,ypos); 
+
+  for (let y = 0; y<height; y+=rowheight) {
+    for (let i = 0; i<20; i++) {
+      let myFun = random(F);
+      dy = random(0,rowheight/2); 
+      x = random (width); 
+      myFun(x,dy);  
+    }
+  }
  }
 
-// function mouseClicked() {
-//   // if more than maxCircles, then add the top box 
-//   if (myShapes.length >= maxNumShapes) {
-//     myShapes = [];
-//   } else {
-//     let shapesToAdd = random(8, 16);
-//     for (let c = 0; c < shapesToAdd; c++) {
-//       addShape();
-//       fill (random(0,255), random(0,255), random (0,255)); 
-//     }
-//   }
-// }
+function mouseClicked() {
+  if (
+    mouseX > xpos &&
+    mouseX < xpos + 30 &&
+    mouseY > ypos &&
+    mouseY < ypos +80
+    )  
+     { banner(); 
+      }
+}
