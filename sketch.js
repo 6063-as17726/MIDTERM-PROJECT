@@ -1,10 +1,10 @@
 //How to run the mouseclick function to identify Waldo 
 //How to avoid/decrease overlap of the characters 
 
-function character0() {
-  //push();
-  //translate(x,y);
-  //pop(); 
+function character0(X,Y) {
+  push();
+  translate(X,Y);
+  pop(); 
 
   // Body
  fill(0);
@@ -43,7 +43,11 @@ function character0() {
  noStroke();
  rect(90, 150, 20, 20);
 }
-function waldo() {
+function waldo(X,Y) {
+  push();
+  translate(X,Y);
+  pop(); 
+
  // Body
  fill(255, 0, 0);
  stroke(0);
@@ -83,7 +87,11 @@ function waldo() {
  noStroke();
  rect(90, 150, 20, 20);
 }
-function character1() {
+function character1(X,Y) {
+  push();
+  translate(X,Y);
+  pop(); 
+
 //stick
  strokeWeight(1); 
  stroke(0); 
@@ -129,7 +137,11 @@ function character1() {
  triangle(80, 75, 120, 75, 100, 40);
 
 }
-function character2() {
+function character2(X,Y) {
+  push();
+  translate(X,Y);
+  pop(); 
+
   // Body
  fill(255, 0, 0);
  stroke(0);
@@ -176,30 +188,38 @@ function character2() {
  rect(87, 125, 25, 20);
 }
 function banner() {
-  
+  rectMode(CENTER); 
+  background (116,196,214);
+  push(); 
+  translate(width/2, height/2); 
+  rotate(-0.1); 
+  fill(255); 
+  rect (0,0, 350, 450 ); 
+  fill(116,196,214); 
+  rect (0, 0, 300, 350 ); 
+  pop();
 }
 
 function setup() {
    //fixed canvas dimensions 
-  createCanvas(500, windowHeight);
-   background(0); 
+  createCanvas(800, windowHeight);
+   background(240); 
    let F = [character0(),character1(), character2()]; 
-   noloop(); 
+   //noloop(); 
  }
 
  function draw() {
   //run loop to draw functions - x is random, y is incrementing 
   let rowheight = windowHeight/7; 
-
   let xpos = random(0, width); 
-  let ypos = random()
+  let ypos = random(0, height); 
   waldo(xpos,ypos); 
 
   for (let y = 0; y<height; y+=rowheight) {
     for (let i = 0; i<20; i++) {
       let myFun = random(F);
       dy = random(0,rowheight/2); 
-      x = random (width); 
+      x = random (0, width); 
       myFun(x,dy);  
     }
   }
