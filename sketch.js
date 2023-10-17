@@ -181,8 +181,8 @@ function banner() {
 
 function setup() {
    //fixed canvas dimensions 
-  createCanvas(windowWidth, windowHeight);
-   background(240); 
+  createCanvas(500, windowHeight);
+   background(0); 
    let F = [character0(),character1(), character2()]; 
    noloop(); 
  }
