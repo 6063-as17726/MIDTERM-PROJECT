@@ -5,10 +5,7 @@ I want to make an interactive piece where there are random, abstract forms all o
 I would want to experiment with mouse click functions, and also functions (My idea is to create different functions with different abstract forms and call them randomely). Maybe I can also use arrays to store the different shape data points?
 I guess I could relate this idea to the concept of interactivity, which we read about in "The Art of Interactive Design" by Chris Crawford, where I would want to address form and function. 
 
-Concept revision - 
-After getting started with the code, I realized that it is extremely difficult for me to create the "game-like" functioning of the code. 
-So I decided to rethink the click functions to be interactive in populating different characters on the screen using classes and arrays and click functions. 
-A fun second step could also be to add other interactive functions to change colors, shapes, etc. 
-
-
 ![DATZM4.jpg](https://imgpile.com/images/DATZM4.jpg)
+
+Week 2 update - 
+For Week 2, I worked on the logic of the code. I laid out the code from start to finish. However, some of my logics are not completed and the overall code is not running yet. But, i aim to work on that this week. 
