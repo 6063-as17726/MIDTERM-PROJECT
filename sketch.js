@@ -201,28 +201,26 @@ function banner() {
 }
 
 function setup() {
-   //fixed canvas dimensions 
   createCanvas(800, windowHeight);
    background(240); 
-   let F = [character0(),character1(), character2()]; 
    //noloop(); 
  }
 
  function draw() {
-  //run loop to draw functions - x is random, y is incrementing 
+  let F = [character0(),character1(), character2()]; 
   let rowheight = windowHeight/7; 
   let xpos = random(0, width); 
-  let ypos = random(0, height); 
-  waldo(xpos,ypos); 
-
+  let ypos = random(0, rowheight);  
   for (let y = 0; y<height; y+=rowheight) {
     for (let i = 0; i<20; i++) {
       let myFun = random(F);
-      dy = random(0,rowheight/2); 
+      dy = random(y,y+rowheight/2); 
       x = random (0, width); 
-      myFun(x,dy);  
+      myFun(x,dy); 
+      ypos = random(dy, ypos);  
     }
   }
+  waldo(xpos,ypos); 
  }
 
 function mouseClicked() {
