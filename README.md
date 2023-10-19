@@ -8,4 +8,8 @@ I guess I could relate this idea to the concept of interactivity, which we read 
 ![DATZM4.jpg](https://imgpile.com/images/DATZM4.jpg)
 
 Week 2 update - 
-For Week 2, I worked on the logic of the code. I laid out the code from start to finish. However, some of my logics are not completed and the overall code is not running yet. But, i aim to work on that this week. 
+For Week 2, I worked on the logic of the code. I laid out the code from start to finish. However, some of my logics are not completed and the overall code is not running yet. But, i aim to work on that this week. Some sketches for the logic: 
+![DpXYqg.jpg](https://imgpile.com/images/DpXYqg.jpg)
+![DpXPKR.jpg](https://imgpile.com/images/DpXPKR.jpg)
+![DpXiac.jpg](https://imgpile.com/images/DpXiac.jpg)
+![DpXc9N.jpg](https://imgpile.com/images/DpXc9N.jpg)
