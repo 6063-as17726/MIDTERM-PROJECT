@@ -59,8 +59,7 @@ function waldo(X,Y) {
 
  //face 
  strokeWeight(0); 
- //fill("LightSalmon"); 
- fill(100,100,255); 
+ fill("LightSalmon"); 
  ellipse(10, 15, 30,30); 
 
  // Glasses
@@ -87,7 +86,7 @@ function waldo(X,Y) {
 
 
  // Pants
- fill(0, 0, 255);
+ fill(116,196,214);
  noStroke();
  rect(0, 60, 20, 20);
 
@@ -140,7 +139,7 @@ function character1(X,Y) {
  // Hat
  fill(0,0,255);
  noStroke();
- triangle(0, 15, 40, 15, 20, -50);
+ triangle(0, 15, 40, 15, 20, -40);
 
  pop(); 
 }
@@ -198,13 +197,19 @@ function character2(X,Y) {
  //Skirt
  fill(0, 0, 255);
  noStroke();
- rect(-3, 35, 25, 20);
+ beginShape(); 
+ vertex(0, 35);
+ vertex(20,35); 
+ vertex(30,55);
+ vertex(-10,55);
+ endShape(); 
 
  pop();
 }
-//add dog characters 
+
 function banner() {
   rectMode(CENTER); 
+  ellipseMode(CENTER); 
   background(0,0,0,127);
   push(); 
   translate(width/2, height/2); 
@@ -215,9 +220,65 @@ function banner() {
   rect (0,20, 350, 450 ); 
   fill(116,196,214); 
   rect (0, 0, 300, 350 ); 
-  //add waldo's face 
-  //add text 
-  pop();
+  scale(5); 
+
+  // Body
+ fill(255,0,0);
+ stroke(0);
+ strokeWeight(0);
+ rect(0, 10, 20, 50);
+
+  // Striped Shirt
+  fill(255, 255, 255);
+  noStroke();
+  rect(0, 25, 20, 10);
+  rect(0, 40, 20, 10);
+
+  //face 
+ strokeWeight(0); 
+ fill("LightSalmon"); 
+ ellipse(0, 0, 30,30); 
+
+ // Glasses
+ fill(255);
+stroke(0);
+strokeWeight(0.5); 
+ ellipse(-5,-5,10,10);
+ ellipse(5,-5,10,10);
+ noStroke(); 
+ fill(0); 
+ ellipse(-5,-5,2,2);
+ ellipse(5,-5,2,2);
+
+//smile and nose
+stroke(0);
+strokeWeight(1); 
+noFill(); 
+arc(0, 5, 15, 10, 0, PI, OPEN);
+strokeWeight(0.5); 
+arc(0, 2, 5, 2, 0, PI, OPEN);
+
+ // Hat
+ fill(255, 0, 0);
+ noStroke();
+ triangle(-15,-10, 15,-10, 0, -35);
+ strokeWeight(1); 
+ stroke(255, 0, 0); 
+ fill(255); 
+ ellipse(0,-35,10,10);
+
+ textSize(6); 
+ fill(255,0,0); 
+ stroke(0); 
+ strokeWeight(0.5); 
+ text('YOU FOUND WALDO!', -30, 42);
+ 
+ textSize(2); 
+ fill(116,196,214); 
+ strokeWeight(0); 
+ text('PRESS s TO SAVE IMAGE', -30, 48);
+
+pop();
 }
 
 function setup() {
@@ -261,4 +322,9 @@ function mouseClicked() {
      { banner();
       }
 }
-//add s and r for saving and refreshing 
+
+function keyPressed() {
+  if (key == 's') {
+    saveCanvas('myCanvas', 'jpg');
+  }
+}
