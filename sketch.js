@@ -1,4 +1,8 @@
-//How to avoid/decrease overlap of the characters 
+
+let xpos; 
+let ypos;
+
+//refine characters 
 
 function character0(X,Y) {
   push();
@@ -48,14 +52,15 @@ function waldo(X,Y) {
   translate(X,Y);
 
  // Body
- fill(255, 0, 0);
+ fill(255,0,0);
  stroke(0);
  strokeWeight(2);
  rect(0, 10, 20, 50);
 
  //face 
  strokeWeight(0); 
- fill("LightSalmon"); 
+ //fill("LightSalmon"); 
+ fill(100,100,255); 
  ellipse(10, 15, 30,30); 
 
  // Glasses
@@ -197,17 +202,21 @@ function character2(X,Y) {
 
  pop();
 }
-
+//add dog characters 
 function banner() {
   rectMode(CENTER); 
-  background (116,196,214);
+  background(0,0,0,127);
   push(); 
   translate(width/2, height/2); 
   rotate(-0.1); 
+  fill(0,0,0,150); 
+  rect (-15,35, 350, 450 );
   fill(255); 
-  rect (0,0, 350, 450 ); 
+  rect (0,20, 350, 450 ); 
   fill(116,196,214); 
   rect (0, 0, 300, 350 ); 
+  //add waldo's face 
+  //add text 
   pop();
 }
 
@@ -215,36 +224,41 @@ function setup() {
   createCanvas(800, windowHeight);
    background(240); 
    noLoop(); 
+   
  }
 
 function draw() {
 
-  let F = [character0,character1, character2]; 
+  let F = [character0, character1, character2]; 
   let rowheight = windowHeight/7;  
   let columnheight = windowWidth/25; 
-  let xpos = random(0, columnheight); 
-  let ypos = random(0, rowheight);  
+  let xArray = [];
+  let yArray = [];
 
   for (let y = 0; y<height; y+=rowheight) {
     for (let x = 0; x<width; x+=columnheight) {
-        let myFun = random(F); 
+        let myFun = random(F); //picks character
         let dy = random(y,y+rowheight/2); 
         let dx = random(x, x+columnheight); 
-        myFun(dx,dy); 
-        ypos = random(dy, ypos);  
-        xpos = random(dx, xpos); 
+        xArray.push(dx);
+        yArray.push(dy);
+        myFun(dx,dy); //draws character
     }
   }
+  xpos = xArray[floor(random(0,xArray.length))]; 
+  ypos = yArray[floor(random(0,yArray.length))]; 
+
   waldo(xpos,ypos); 
  }
 
 function mouseClicked() {
   if (
     mouseX > xpos &&
-    mouseX < xpos + 30 &&
+    mouseX < xpos + 100 &&
     mouseY > ypos &&
-    mouseY < ypos +80
+    mouseY < ypos + 100
     )  
-     { banner(); 
+     { banner();
       }
 }
+//add s and r for saving and refreshing 
