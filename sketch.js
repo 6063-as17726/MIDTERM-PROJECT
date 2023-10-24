@@ -207,11 +207,11 @@ function character2(X,Y) {
  pop();
 }
 
-function banner() {
-  rectMode(CENTER); 
-  ellipseMode(CENTER); 
+function banner() { 
   background(0,0,0,127);
   push(); 
+  rectMode(CENTER); 
+  ellipseMode(CENTER);
   translate(width/2, height/2); 
   rotate(-0.1); 
   fill(0,0,0,150); 
@@ -276,7 +276,8 @@ arc(0, 2, 5, 2, 0, PI, OPEN);
  textSize(2); 
  fill(116,196,214); 
  strokeWeight(0); 
- text('PRESS s TO SAVE IMAGE', -30, 48);
+ text('PRESS s TO SAVE IMAGE', -30, 45);
+ text('PRESS r TO RESET', -30, 48);
 
 pop();
 }
@@ -326,5 +327,10 @@ function mouseClicked() {
 function keyPressed() {
   if (key == 's') {
     saveCanvas('myCanvas', 'jpg');
+  }
+
+  if(key == 'r') {
+    background(240); 
+    redraw(); 
   }
 }
