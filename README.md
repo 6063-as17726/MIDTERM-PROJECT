@@ -18,3 +18,11 @@ This is an updated version of the last sketch, showing the randomized loop, such
 ![DpXc9N.jpg](https://imgpile.com/images/DpXc9N.jpg)
 Lastly, this sketch showcases the "planned chaos" using a value called rowheight, after which Waldo would be detected based on if the click was within the area of Waldo. 
 
+Week 3 update - 
+For Week 3, the last week, I worked on refining the logic. For this, I started by commenting out the entire code, and taking one section at a time. For each section, I went into the details of the logic and refined it. Finally, the code ran, and all that was left to do was further refine the visuals and add descriptive text. 
+The final code is an interactive piece inspired by the book, "Where's Waldo". There are characters all over the screen and the goal is to find the character "Waldo". When Waldo is identified and clicked, a pop up shows up on the screen indicating the game is over. The viewer can also save or refresh the screen. 
+Some rough logic sketches - 
+![G4Y4dG.png](https://imgpile.com/images/G4Y4dG.png)
+![G4Ynma.png](https://imgpile.com/images/G4Ynma.png)
+
+
